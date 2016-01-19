@@ -67,6 +67,8 @@ nnoremap <C-c> :bp\|bd #<CR>
 
 inoremap </ </<C-X><C-O>
 
+nnoremap Q @q
+
 """""""""""""""
 " VIM-AIRLINE "
 """""""""""""""
