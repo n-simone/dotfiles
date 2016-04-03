@@ -9,6 +9,9 @@ syntax on " syntax highlighting
 
 set hidden " allows switching between buffers without saving
 
+set ssop-=options " do not store variables in a session (i.e. allows changes to vimrc)
+set ssop-=folds " do not store folds
+
 " enables "visual" wrapping and turns off physical line wrapping (ie: automatic insertion of newlines)
 set wrap
 set textwidth=0 wrapmargin=0
@@ -48,6 +51,8 @@ autocmd FileType markdown setlocal foldmethod=indent
 " KEY BINDINGS "
 """"""""""""""""
 
+let mapleader="\<cr>"
+
 nnoremap <space> :
 
 nnoremap S :w<cr>
@@ -68,6 +73,10 @@ nnoremap <C-c> :bp\|bd #<CR>
 inoremap </ </<C-X><C-O>
 
 nnoremap Q @q
+
+set pastetoggle=<leader>P
+
+inoremap <leader><leader> <CR>
 
 """""""""""""""
 " VIM-AIRLINE "
